@@ -15,19 +15,19 @@ body{
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 .titulo_header{
     font-size: 24px;
-    color: #ffffff; /* Color de texto para el título */
-    display: inline-block; /* Mostrar elementos uno al lado del otro */
+    color: #ffffff;
+    display: inline-block;
     vertical-align: middle;
 }
 
 .navegador_header{
-    margin-top: 10px; /* Espacio entre el título y la navegación */
-    display: inline-block; /* Mostrar elementos uno al lado del otro */
+    margin-top: 10px;
+    display: inline-block;
     vertical-align: middle;
 }
 
@@ -41,15 +41,24 @@ body{
 }
 
 .navegador_header ul li a {
-    color: #ffffff; /* Color de texto para los enlaces */
+    color: #ffffff;
     text-decoration: none;
 }
 
 
-.contenido{
+.contenedor{
     background-color: #020202;
     padding: 20px;
     height: 500px;
+}
+
+.footer{
+    background-color: #373739;
+    padding: 20px;
+}
+
+.footer p {
+    color: #ffffff;
 }
 
 .boton-chat{
@@ -63,13 +72,4 @@ body{
 
 .boton-chat img{
     width: 60px;
-}
-
-.footer{
-    background-color: #373739;
-    padding: 20px;
-}
-
-.footer p {
-    color: #ffffff; /* Color de texto para el pie de página */
 }
