@@ -1,5 +1,5 @@
 @media screen and (max-width: 450px) {
-
+    
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +8,71 @@
 
 body{
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
 }
 
+/* Header */
+.header{
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-logo{
+    margin: 10px;
+    
+}
+
+.header-logo a img{
+    width: 80px;
+}
+
+.header-nav{
+    margin-bottom: 0px;
+}
+
+.header-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.header-nav ul li {
+    display: inline-block;
+}
+
+.header-nav ul li a:hover {
+    background-color: #2b2a2a;
+}
+
+.header-nav ul li a {
+    display: block;
+    padding: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+/* Header */
+
+/* contenedor */
 
 
+
+
+
+
+/* contenedor */
+
+
+/* footer */
 
 /* Whatsapp Boton */
 .boton-chat{
@@ -28,5 +88,4 @@ body{
     width: 60px;
 }
 /* Whatsapp Boton */
-
 }

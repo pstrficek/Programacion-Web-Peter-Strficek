@@ -10,6 +10,10 @@
 body{
     font-family: Arial, sans-serif;
     font-size: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
 
 /* Header */
@@ -18,6 +22,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 1000;
+    grid-row: 1;
 }
 
 .header-grid{
@@ -50,7 +55,7 @@ body{
 }
 
 .header-nav ul li a:hover {
-    background-color: #2b2a2a;
+    background-color: #2c2c2c;
 }
 
 .header-nav ul li a {
@@ -62,11 +67,21 @@ body{
 /* Header */
 
 /* contenedor */
+.contenedor{
+    background-color: #1b1b1b;
+    height: 100%;
+    grid-row: 2;
+
+}
+
 
 /* contenedor */
 
 /* footer */
-
+.footer {
+    background-color: #051fe0;
+    grid-row: 3;
+}
 /* footer */
 
 /* Whatsapp Boton */
