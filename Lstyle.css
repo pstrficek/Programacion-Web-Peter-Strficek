@@ -9,6 +9,7 @@ body{
     color: #ffffff96;
 }
 
+/* Header */
 .header{
     background-color: #373739;
     padding: 20px;
@@ -44,14 +45,17 @@ body{
     color: #ffffff;
     text-decoration: none;
 }
+/* Header */
 
-
+/* contenedor */
 .contenedor{
     background-color: #020202;
     padding: 20px;
     height: 500px;
 }
+/* contenedor */
 
+/* footer */
 .footer{
     background-color: #373739;
     padding: 20px;
@@ -60,7 +64,9 @@ body{
 .footer p {
     color: #ffffff;
 }
+/* footer */
 
+/* Whatsapp Boton */
 .boton-chat{
     background-color: #b4b6c6;
     position: fixed;
@@ -73,3 +79,4 @@ body{
 .boton-chat img{
     width: 60px;
 }
+/* Whatsapp Boton */
