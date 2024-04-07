@@ -1,3 +1,6 @@
+/* Estilos para pantallas con menos de 450px */
+@media screen and (min-width: 450px) {
+
 * {
     margin: 0;
     padding: 0;
@@ -6,64 +9,64 @@
 
 body{
     font-family: Arial, sans-serif;
-    color: #ffffff96;
+    font-size: 18px;
 }
 
 /* Header */
 .header{
-    background-color: #373739;
-    padding: 20px;
-    text-align: center;
+    background-color: #000000;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.titulo_header{
-    font-size: 24px;
-    color: #ffffff;
-    display: inline-block;
-    vertical-align: middle;
+.header-grid{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.navegador_header{
-    margin-top: 10px;
-    display: inline-block;
-    vertical-align: middle;
+.header-logo{
+    grid-column: 1/1;
 }
 
-.navegador_header ul {
+.header-logo a img{
+    width: 120px;
+}
+
+.header-nav{
+    grid-column: 2/2;
+}
+.header-nav ul {
     list-style: none;
+    text-align: center;
 }
 
-.navegador_header ul li {
+.header-nav ul li {
     display: inline;
-    margin: 0 10px;
 }
 
-.navegador_header ul li a {
+.header-nav ul li a:hover {
+    background-color: #2b2a2a;
+}
+
+.header-nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    padding: 20px;
 }
+
 /* Header */
 
 /* contenedor */
-.contenedor{
-    background-color: #020202;
-    padding: 20px;
-    height: 500px;
-}
+
 /* contenedor */
 
 /* footer */
-.footer{
-    background-color: #373739;
-    padding: 20px;
-}
 
-.footer p {
-    color: #ffffff;
-}
 /* footer */
 
 /* Whatsapp Boton */
@@ -80,3 +83,5 @@ body{
     width: 60px;
 }
 /* Whatsapp Boton */
+
+}

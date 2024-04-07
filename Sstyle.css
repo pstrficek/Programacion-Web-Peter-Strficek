@@ -1,0 +1,79 @@
+@media screen and (max-width: 450px) {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.header{
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-logo{
+    grid-row: 1/1;
+
+}
+
+.header-logo img{
+    width: 120px;
+}
+
+.header-nav{
+    grid-row: 2/2
+}
+
+.header-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.header-nav ul li {
+    display: inline;
+    padding: 10px 0px;
+}
+
+.header-nav ul li a:hover {
+    background-color: #2b2a2a;
+}
+
+.header-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+}
+
+
+/* Whatsapp Boton */
+.boton-chat{
+    background-color: #b4b6c6;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 30%;
+}
+
+.boton-chat img{
+    width: 60px;
+}
+/* Whatsapp Boton */
+
+}
