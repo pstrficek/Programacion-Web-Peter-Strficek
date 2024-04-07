@@ -37,14 +37,15 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 10px;
+    padding-bottom: 20%;
 }
 
 .menu ul li a:hover {
-    border-bottom: 2px solid #fff;
+    border-bottom: 3px solid #fff;
 }
 
 .menu ul li a.active {
-    border-bottom: 2px solid #fff;
+    border-bottom: 3px solid #fff;
 }
 
 .contacto a {
