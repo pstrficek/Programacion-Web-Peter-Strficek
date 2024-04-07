@@ -7,7 +7,7 @@ body {
 }
 
 .header {
-    background-color: #333;
+    background-color: #3333338c;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -38,12 +38,20 @@ body {
     padding: 10px;
 }
 
+.menu ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.menu ul li a.active {
+    border-bottom: 2px solid #fff;
+}
+
 .contacto a {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
-    background-color: #FF5733;
-    border-radius: 5px;
+    padding: 15px 30px;
+    background-color: #ff5833;
+    border-radius: 2px;
 }
 
 .container {
@@ -86,6 +94,5 @@ body {
 .boton-chat img{
     width: 60px;
 }
-/* Whatsapp Boton */
 
 }
