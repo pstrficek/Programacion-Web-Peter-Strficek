@@ -58,7 +58,7 @@ body {
 .imagen-fondo {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     z-index: 1;
 }
 .imagen-fondo-cel{
