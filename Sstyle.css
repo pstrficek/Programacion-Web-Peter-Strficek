@@ -68,6 +68,10 @@ body {
     z-index: 1;
 }
 
+.imagen-fondo-cel{
+    width: 100%;
+}
+
 .imagen-fondo-pc{
     display: none;
 }

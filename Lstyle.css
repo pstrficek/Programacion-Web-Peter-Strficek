@@ -62,7 +62,7 @@ body {
     z-index: 1;
 }
 .imagen-fondo-pc{
-    width: 1500px;
+    width: 100%;
 }
 .imagen-fondo-cel{
     display: none;
