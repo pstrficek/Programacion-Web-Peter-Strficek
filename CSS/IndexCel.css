@@ -1,49 +1,54 @@
 @media screen and (max-width: 450px) {
 
+
+
+
+
+
+
 body {
     margin: 0;
     padding: 0;
+    font-size: 14px;
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
     min-height: 100vh;
+    color: #fff;
+    background-color: black;
     display: flex;
     flex-direction: column;
 }
 
 .header {
-    background-color: #33333300;
+    background-color: #00000000;
     color: #fff;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
     z-index: 1000;
-}
-
-.logo{
-    margin-bottom: auto;
+    box-sizing: border-box;
 }
 
 .logo img {
     max-width: 80px;
-}
-
-.menu{
-    margin-top: auto;
-    padding-top: 5px;
+    padding: 0;
 }
 
 .menu ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .menu ul li {
-    display: inline;
+    flex: 1; 
+    text-align: center;
+    padding: 1em;
 }
 
 .menu ul li a {
@@ -52,11 +57,7 @@ body {
     padding: 10px;
 }
 
-.menu ul li a:hover {
-    border-bottom: 3px solid #fff;
-}
-
-.menu ul li a.active {
+.menu ul li a:hover{
     border-bottom: 3px solid #fff;
 }
 
@@ -69,11 +70,11 @@ body {
     z-index: 1;
 }
 
-.imagen-fondo-cel{
+.imagen-fondo-cel {
     width: 100%;
 }
 
-.imagen-fondo-pc{   
+.imagen-fondo-pc {
     display: none;
 }
 
@@ -82,13 +83,11 @@ body {
     color: #fff;
     padding: 20px 0px;
     text-align: center;
-    width: 100%;
     z-index: 999;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
 }
 
-.boton-chat{
+.boton-chat {
     background-color: #38DBFF;
     padding: 5px;
     position: fixed;
@@ -98,7 +97,7 @@ body {
     border-radius: 30%;
 }
 
-.boton-chat-icon{
+.boton-chat-icon {
     width: 50px;
 }
 }
