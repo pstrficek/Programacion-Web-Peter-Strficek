@@ -1,20 +1,24 @@
-/* Estilos para pantallas con menos de 450px */
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 450px) {
+/*
+    Azul: #38DBFF
+    Azul+: #6eb2cc
+    Azul++: #2f6a87
+*/
 
 body {
     margin: 0;
     padding: 0;
+    font-size: 18px;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
+    color: #fff;
 }
 
 .header {
-    background-color: #3333338c;
-    color: #fff;
-    padding: 10px;
+    background-color: #00000000;
+    padding: 20px 20px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -22,31 +26,28 @@ body {
     z-index: 1000;
 }
 
-.logo{
-    margin-bottom: auto;
-}
-
 .logo img {
-    max-width: 80px;
-}
-
-.menu{
-    margin-top: auto;
-    padding-top: 5px;
+    max-width: 140px;
+    padding: 0;
 }
 
 .menu ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .menu ul li {
-    display: inline;
+    flex: 1; 
+    text-align: center;
+    padding: 1em;
 }
 
 .menu ul li a {
     color: #fff;
+    font-weight: 700;
     text-decoration: none;
     padding: 10px;
 }
@@ -60,27 +61,36 @@ body {
 }
 
 .contacto a {
-    display: none;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-right: 10px;
+    background-color: #38DBFF;
+    border-radius: 2px;
 }
 
 .imagen-fondo {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
 }
-
-.imagen-fondo-cel{
-    width: 100%;
-}
-
 .imagen-fondo-pc{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.imagen-fondo-cel{
     display: none;
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
 }
 
 
@@ -89,27 +99,17 @@ body {
     color: #fff;
     padding: 20px;
     text-align: center;
-}
-
-
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: 999;
 }
 
-/* Whatsapp Boton */
+
 .boton-chat{
-    background-color: #b4b6c6;
+    background-color: #ffffff;
     position: fixed;
-    bottom: 20px;
+    bottom: 60px;
     right: 20px;
     z-index: 1000;
     border-radius: 30%;
@@ -118,6 +118,5 @@ body {
 .boton-chat img{
     width: 60px;
 }
-/* Whatsapp Boton */
 
 }
