@@ -6,6 +6,8 @@ body {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -64,56 +66,39 @@ body {
 
 .imagen-fondo {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 1;
-}
-.imagen-fondo-pc{   
-    display: none;
 }
 
 .imagen-fondo-cel{
     width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
+}
+
+.imagen-fondo-pc{   
+    display: none;
 }
 
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0px;
     text-align: center;
-}
-
-
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     z-index: 999;
+    position: absolute;
+    bottom: 0;
 }
 
-/* Whatsapp Boton */
 .boton-chat{
     background-color: #38DBFF;
+    padding: 5px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10%;
+    right: 5%;
     z-index: 1000;
     border-radius: 30%;
 }
 
-.boton-chat img{
-    width: 60px;
+.boton-chat-icon{
+    width: 50px;
 }
-/* Whatsapp Boton */
-
 }
