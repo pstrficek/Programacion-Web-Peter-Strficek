@@ -28,6 +28,10 @@
         z-index: 1000;
         box-sizing: border-box;
     }
+    .header.scrolled{
+        background-color: rgba(0, 0, 0, 0.8);
+
+    }
     
     .logo img {
         max-width: 140px;
@@ -172,12 +176,16 @@
         padding-right: 10px;
     }
 
-
-
-
-    .ubicacion .mapa{
+    .ubicacion .pre-mapa{
         flex: 1;
     }    
+
+    #map{
+        height: 500px;
+        width: 100%;
+    }
+
+
     .footer {
         background-color: #000000;
         color: #fff;
