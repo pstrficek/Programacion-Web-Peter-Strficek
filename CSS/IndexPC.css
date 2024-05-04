@@ -59,13 +59,14 @@
         border-bottom: 3px solid #38dbffb7;
     }
     
-    .contacto a {
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-        padding: 10px 30px;
-        background-color: #38DBFF;
-        border-radius: 2px;
+    .sociales img{
+        width: 30px;
+        margin: 0px 10px;
+        border-radius: 10px;
+    }
+
+    .sociales img:hover{
+        background-color: #ffffff6c;
     }
     
     .imagen-fondo{
