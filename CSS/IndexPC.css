@@ -71,10 +71,54 @@
     .imagen-fondo-pc{
         width: 100%;
     }
-    
     .imagen-fondo-cel{
         display: none;
     }
+
+    .imagen-fondo .texto {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+    }
+    
+    .imagen-fondo .texto h1{
+        color: #fff;
+        font-size: 100px;
+        margin: 0px;
+    }
+    
+    .imagen-fondo .texto h1 span{
+        color: #38DBFF;
+    
+    }
+    
+    .imagen-fondo .texto h2{
+        color: #fff; /* color del texto */
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    .imagen-fondo .texto .contacto{
+        margin-top: 100px;
+    }
+    
+    .imagen-fondo .texto .contacto a {
+        text-decoration: none;
+        color: #333;
+        padding: 15px 35px;
+        background-color: #38dbffb7;
+        border-radius: 10px;
+        font-weight: 700;
+    }
+    
+    .imagen-fondo .texto .contacto a:hover{
+        background-color: #38DBFF;
+    }
+
+
     
     .footer {
         background-color: #333;
