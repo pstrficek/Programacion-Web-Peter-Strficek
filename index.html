@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Baires</title>
-    <link rel="icon" href="Imagenes/logo.png">
     <link rel="stylesheet" href="CSS/IndexPC.css">
     <link rel="stylesheet" href="CSS/IndexCel.css">
 </head>
@@ -18,9 +17,9 @@
         <div class="menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="HTML/acerca.html">Acerca</a></li>
-                <li><a href="HTML/planes.html">Planes</a></li>
-                <li><a href="HTML/contacto.html">Contacto</a></li>
+                <li><a href="javascript:void(0)" onclick="scrollToSection('seccion1')">Acerca</a></li>
+                <li><a href="javascript:void(0)" onclick="scrollToSection('seccion2')">Planes</a></li>
+                <li><a href="javascript:void(0)" onclick="scrollToSection('seccion3')">Contacto</a></li>
             </ul>
         </div>
         <div class="sociales">
@@ -45,7 +44,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.     Architecto aut quasi rerum libero accusamus quas odit magni     commodi voluptatibus omnis, placeat mollitia, nostrum nesciunt  quo similique fugit fugiat maxime ipsum.</p>
         </div>
     </div>
-    <div class="ubicacion">
+    <div class="ubicacion" id="seccion3">
         <div class="texto">
             <h2>Contacto</h2>
             <h1>Titulo de contacto</h1>
@@ -56,6 +55,9 @@
                 <li><img src="Imagenes/icons8-marcador-50.png" alt="Ubicación"> Lavardén 315, C1437, CABA - Iguazú 341, C1437, CABA - San Martín 202, C1004AAB, CABA</li>
                 <li><img src="Imagenes/icons8-reloj-30.png" alt="Horarios"> Lunes - Viernes: 8hr - 22hr</li>
             </ul>
+            <a href="https://api.whatsapp.com/send?phone=1128735290" target="_blank">
+            Tengo una pregunta &#8594
+            </a>
         </div>
         <div class="pre-mapa">
             <div class="map" id="map">

@@ -7,14 +7,31 @@ window.addEventListener('scroll', function() {
 });
 
 /*********************************************/
+
+function scrollToSection(sectionId) {
+    var destino = document.getElementById(sectionId);
+    destino.scrollIntoView({ behavior: 'smooth' });
+}
+
+/*********************************************/
 function iniciarMap(){
-    var coord = {lat:-34.5956145 ,lng: -58.4431949};
+    var coords = [
+        {lat: -34.6055413, lng: -58.3763923},
+        {lat: -34.6417149, lng: -58.4063908},
+        {lat: -34.6406136, lng: -58.4039297}
+    ];
+        
     var map = new google.maps.Map(document.getElementById('map'),{
-      zoom: 10,
-      center: coord
+    zoom: 12,
+    center: coords[0],
     });
-    var marker = new google.maps.Marker({
-      position: coord,
-      map: map
+    
+    coords.forEach(function(coord) {
+        var marker = new google.maps.Marker({
+            position: coord,
+            map: map
+        });
     });
 }
+
+/*********************************************/

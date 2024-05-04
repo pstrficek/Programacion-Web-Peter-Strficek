@@ -160,6 +160,15 @@
         padding-bottom: 10px;
     }
 
+    .ubicacion .texto a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .ubicacion .texto a:hover{
+        border-bottom: 2px solid #ffffff;
+    }
+
     .contacto {
         list-style-type: none;
         padding-left: 0;
@@ -178,11 +187,13 @@
 
     .ubicacion .pre-mapa{
         flex: 1;
+        padding: 50px;
     }    
 
     #map{
         height: 500px;
         width: 100%;
+        border-radius: 15px;
     }
 
 
