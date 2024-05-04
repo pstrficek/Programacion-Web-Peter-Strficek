@@ -68,8 +68,14 @@
         border-radius: 2px;
     }
     
-    .imagen-fondo-pc{
+    .imagen-fondo{
         position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .imagen-fondo-pc{
         height: auto;
         width: 100%;
     }
@@ -87,7 +93,7 @@
     
     .imagen-fondo .texto h1{
         color: #fff;
-        font-size: 6vw;
+        font-size: 5vw;
         margin: 0px;
     }
     
@@ -98,8 +104,8 @@
     
     .imagen-fondo .texto h2{
         color: #fff; /* color del texto */
-        font-size: 2vw;
-        margin-top: 2vw;
+        font-size: 1.5vw;
+        margin-top: 1vw;
     }
     
     .imagen-fondo .texto .contacto{
@@ -109,11 +115,11 @@
     .imagen-fondo .texto .contacto a {
         text-decoration: none;
         color: #333;
-        padding: 2vw 5vw;
+        padding: 1vw 3vw;
         background-color: #38dbffb7;
         border-radius: 10px;
         font-weight: 700;
-        font-size: 1.5vw;
+        font-size: 1vw;
     }
     
     .imagen-fondo .texto .contacto a:hover{
