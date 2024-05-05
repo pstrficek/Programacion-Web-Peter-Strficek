@@ -1,9 +1,14 @@
 window.addEventListener('scroll', function() {
     var header = document.querySelector('.header');
-    var scrollPosition = window.scrollY;
-    var opacity = scrollPosition / 100; // Ajusta 500 según la velocidad deseada
+    var menuResponsive = document.querySelector('.menu-responsive');
 
-    header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+    if (!menuResponsive.classList.contains("menu-responsive_visible")) {
+        var scrollPosition = window.scrollY;
+        var opacity = scrollPosition / 100;
+        header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+    } else {
+        header.style.backgroundColor = "black";
+    }
 });
 
 /*********************************************/
@@ -33,6 +38,27 @@ function iniciarMap(){
         });
     });
 }
+
+/*********************************************/
+
+const menuResponsive = document.querySelector(".menu-responsive");
+const responsiveIcon = document.querySelector(".responsive-icon");
+const links = document.querySelectorAll(".menu-responsive a");
+
+responsiveIcon.addEventListener("click", () => {
+    menuResponsive.classList.toggle("menu-responsive_visible");
+    var header = document.querySelector('.header');
+    header.style.backgroundColor = "black";
+});
+
+
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        menuResponsive.classList.remove("menu-responsive_visible");
+        var header = document.querySelector('.header');
+        header.style.backgroundColor = "";
+    });
+});
 
 /*********************************************/
 

@@ -4,13 +4,6 @@
         color: #fff;
         text-decoration: none;
     }
-
-
-    /*
-        Azul: #38DBFF
-        Azul+: #6eb2cc
-        Azul++: #2f6a87
-    */
     
     body {
         margin: 0;
@@ -34,10 +27,11 @@
         z-index: 1000;
         box-sizing: border-box;
     }
-    .header.scrolled{
-        background-color: rgba(0, 0, 0, 0.8);
-    }
     
+    .menu-responsive, .responsive-icon{
+        display: none;
+    }
+
     .logo img {
         max-width: 140px;
         padding: 0;
@@ -111,7 +105,7 @@
     }
     
     .imagen-fondo .texto h2{
-        color: #fff; /* color del texto */
+        color: #fff;
         font-size: 1.5vw;
         margin-top: 1vw;
     }
@@ -383,4 +377,4 @@
     }
 
 
-    }
+}
