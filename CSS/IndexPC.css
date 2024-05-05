@@ -17,7 +17,6 @@
         padding: 0;
         font-size: 18px;
         font-family: Arial, sans-serif;
-        min-height: 100vh;
         color: #fff;
         background-color: black;
         display: flex;
@@ -155,6 +154,10 @@
         margin-bottom: 0px;
     }
 
+    .acerca .texto p{
+        color: #ffffff86;
+    }
+
     .acerca .imagen{
         flex: 1;
         padding: 20px;
@@ -169,6 +172,7 @@
     .acerca .imagen img{
         width: 100%;
         border-radius: 20px;
+        opacity: 0.6;
         
     }
 
@@ -185,7 +189,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 30px 30px 60px 30px;
+        padding: 30px 0px 60px 0px;
     }
     
     .planes .texto h2 {
@@ -209,9 +213,8 @@
         width: 70%;
     }
 
-    .planes .contenedor .plan {
-        min-height: 450px;
-        width: 100%;
+    .plan {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
         border-radius: 20px;
         margin: 0px 10px 100px 10px;
         display: flex;
@@ -219,6 +222,12 @@
         align-items: center;
         flex-direction: column;
         padding: 20px;
+        transform: translateY(20px); 
+    }
+
+    .plan:hover{
+        transform: translateY(10px);
+        box-shadow: 0px 60px 20px rgba(0, 0, 0, 0.2);
     }
     
     .planes .contenedor .plan h2 span{
@@ -248,11 +257,10 @@
 
     #plan2 a{
         color: #333;
-        background-color: #fff;
     }
 
     #plan2 a:hover{
-        border-color: #333;
+        background-color: #ffffff;
     }
     
     #plan3{
@@ -265,7 +273,12 @@
     }
 
     .planes .contenedor .plan li{
-        padding: 10px;
+        padding: 10px 0px;
+    }
+
+    .planes .contenedor .plan li img{
+        width: 25px;
+        padding: 0px 10px 0px 0px;
     }
 
 
@@ -302,11 +315,11 @@
 
     .a1{
         text-decoration: none;
-        color: #ffffff;
+        color: #ffffff84;
     }
 
     .a1:hover{
-        border-bottom: 2px solid #ffffff;
+        color: #ffffff;
     }
 
     .contacto {
@@ -351,7 +364,7 @@
     }
     
     
-    .boton-chat{
+    .boton-chat a{
         background-color: #38dbff7f;
         padding: 8px;
         position: fixed;
@@ -363,8 +376,9 @@
     
     .boton-chat-icon{
         width: 45px;
+        opacity: 0.4;
     }
-    .boton-chat:hover{
+    .boton-chat a:hover{
         background-color: #38dbff;
     }
 
