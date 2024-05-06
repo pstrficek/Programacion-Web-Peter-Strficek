@@ -25,12 +25,9 @@
         background-color: #00000000;
     }
 
-
     .menu, .sociales, .logo {
         display: none;
     }
-
-
 
     .responsive-icon{
         flex: 1;

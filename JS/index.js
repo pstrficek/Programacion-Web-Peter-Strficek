@@ -42,7 +42,7 @@ function iniciarMap(){
 /*********************************************/
 
 const menuResponsive = document.querySelector(".menu-responsive");
-const responsiveIcon = document.querySelector(".responsive-icon");
+const responsiveIcon = document.querySelector(".responsive-icon img");
 const links = document.querySelectorAll(".menu-responsive a");
 
 responsiveIcon.addEventListener("click", () => {
