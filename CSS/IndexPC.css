@@ -81,7 +81,7 @@
         height: auto;
         width: 100%;
     }
-    .imagen-fondo-cel{
+    .imagen-fondo-cel, .video-player{
         display: none;
     }
 
