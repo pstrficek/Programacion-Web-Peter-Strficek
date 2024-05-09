@@ -138,28 +138,17 @@
         flex: 1;
         border: none;
         margin: 5px 0px;
-        padding: 10px 150px 10px 10px;
+        padding: 10px 5%;
         border-radius: 10px;
         background-color: #ffffff31;
         color: #fff;
         font-weight: 700;
+        max-width: 400px;
     }
-    
+
     .registros:hover{
         background-color: #ffffff0d;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     .ubicacion{
         background-color: #101010;
@@ -260,6 +249,331 @@
     .boton-chat a:hover{
         background-color: #38dbff;
     }
+
+}
+
+@media screen and (max-width: 450px) {
+
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        }
+    
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        box-sizing: border-box;
+        display: flex;
+        background-color: #00000000;
+    }
+
+    .menu, .sociales, .logo {
+        display: none;
+    }
+
+    .responsive-icon{
+        flex: 1;
+        padding: 20px 30px;
+        width: 30px;
+        right: 0;
+    }
+    .responsive-icon img{
+        width: 30px;
+    }
+
+    .menu-responsive{
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 75px;
+        position: fixed;   
+        left: 100%;
+        padding-top: 30px;
+    }
+    .menu-responsive_visible{
+        left: 0;
+        transition: left 0,3s;
+    }
+
+    .responsive-menu ul{
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .responsive-menu li{
+        padding: 10px;
+    }
+
+    .responsive-logo img{
+        width: 150px;
+    }
+
+    .responsive-sociales img{
+        width: 40px;
+        padding: 15px;
+    }
+    
+    .contenedor-formulario{
+        width: 50%;
+        margin: 10% 0px;
+        background-color: #ffffff0f;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        border: 2px solid #38dbff; 
+        padding: 50px 40px;
+        position: relative;
+        left: 16%;
+    }
+
+    .contenedor-formulario-titulo{
+        margin: 0;
+        margin: 50px 0px;
+    }
+
+    .formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-registros{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 30px 0px;
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 50px 0px;
+    }
+
+    #boton_1 p{
+        padding: 12px  80px ;
+        background-color: #38dbff;
+        border-radius: 10px;
+        color: #fff;
+        }
+
+    #boton_1 p:hover{
+        background-color: #ffffff4a;
+        color: #ffffff81;
+    }
+
+    .seccion-registros{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 15px;
+    }
+
+    .registros {
+        flex: 1;
+        border: none;
+        margin: 2% 0;
+        padding: 1.5% 5% 1.5% 1.5%;
+        border-radius: 10px;
+        background-color: #ffffff31;
+        color: #fff;
+        font-weight: 700;
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    
+    .registros:hover{
+        background-color: #ffffff0d;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .ubicacion{
+            background-color: #101010;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .ubicacion .texto{
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .ubicacion .texto h1{
+            margin: 0px;
+            padding-bottom: 20px;
+    
+        }
+    
+        .ubicacion .texto h2{
+            color: #adeffe;
+            margin: 0px;
+            padding-bottom: 10px;
+        }
+    
+        .ubicacion .texto p{
+            margin: 0px;
+            padding-bottom: 10px;
+        }
+    
+        .a1{
+            text-decoration: none;
+            color: #ffffff84;
+        }
+    
+        .a1:hover{
+            color: #ffffff;
+        }
+    
+        .contacto {
+            list-style-type: none;
+            padding-left: 0;
+        }
+    
+        .contacto li {
+            margin-bottom: 0px;
+            padding-bottom: 10px;
+        }
+        
+        .contacto li img {
+            width: 15px;
+            margin: 0px;
+            padding-right: 10px;
+        }
+    
+        #sociales2{
+            margin-top: 40px;
+        }
+
+        .ubicacion .pre-mapa{
+            flex: 1;
+        }    
+    
+        #map{
+            height: 300px;
+            width: 100%;
+        }
+    
+        .footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px 0px;
+            text-align: center;
+            z-index: 999;
+            margin-top: auto;
+        }
+        
+        
+        .boton-chat a{
+            background-color: #38dbff7f;
+            padding: 8px;
+            position: fixed;
+            bottom: 4%;
+            right: 5%;
+            z-index: 1000;
+            border-radius: 20%;
+        }
+        
+        .boton-chat-icon{
+            width: 45px;
+            opacity: 0.4;
+        }
+        .boton-chat a:hover{
+            background-color: #38dbff;
+        }
+    
+    
+    
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
