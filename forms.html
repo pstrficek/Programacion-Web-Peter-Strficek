@@ -49,15 +49,21 @@
             </div>
         </div>
     </div>
-    <div class="formulario" id="seccion4">
-        <h1>Empezar Registrandome</h1>
-        <div>
-            <section class="form-register">
-                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
-                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Apellido">
-                <input class="controls" type="email" name="nombres" id="nombres" placeholder="Email">
-                <input class="controls" type="celular" name="nombres" id="nombres" placeholder="Celular">
-                <input class="botons" type="submit" value="Sigiuente">
+    <div class="contenedor-formulario" id="seccion4">
+        <h1 class="contenedor-formulario-titulo">Empezar Registrandome</h1>
+        <div class="formulario">
+            <section class="form-registros">
+                <div class="seccion-registros" id="seccion-registros-izquierda">
+                    <input class="registros" id="registro-nombre" type="text" name="nombres" placeholder="Nombre">
+                    <input class="registros" id="registro-apellido" type="text" name="apellios" placeholder="Apellido">
+                </div>
+                <div class="seccion-registros" id="seccion-registros-derecha">
+                    <input class="registros" id="registro-email" type="email" name="emails" placeholder="Email">
+                    <input class="registros" id="registro-telefono" type="tel" name="telefonos" placeholder="Celular">
+                </div>
+            </section>
+            <section class="botones">
+                <input id="boton_1" type="submit" value="Sigiuente">
             </section>
         </div>
     </div>

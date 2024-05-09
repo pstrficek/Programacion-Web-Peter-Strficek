@@ -69,28 +69,7 @@
         background-color: #ffffff6c;
     }
 
-    .formulario{
-        background-color: #151515;
-        height: auto;
-        width: 100%;
-        display: flex;
-        min-height: 500px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
 
-    .formulario input h1{ 
-        flex: 1;
-
-    }
-
-    .form-register{
-        flex: 1;
-        width: 400px;
-        padding: 30px;
-        margin: auto;
-    }
 
 
 
