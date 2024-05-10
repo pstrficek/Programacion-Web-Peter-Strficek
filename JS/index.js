@@ -136,14 +136,64 @@ document.getElementById('boton_2').addEventListener('click', function() {
                 break;
         }
         document.getElementById('segunda-pestaña').classList.add('oculto')
-        document.getElementById('tercera-pestaña').classList.add('oculto')
+        document.getElementById('tercera-pestaña').classList.remove('oculto')
 
     } else{
         alert('No se ha seleccionado ningún plan.');
     }
 });
 
+var valorSeleccionadoSemana = ''; 
+var elementosFormularioSemana = document.getElementsByClassName('formulario-semana');
+for (var i = 0; i < elementosFormularioSemana.length; i++) {
+    elementosFormularioSemana[i].addEventListener('click', function(event) {
+        for (var j = 0; j < elementosFormularioSemana.length; j++) {
+            elementosFormularioSemana[j].classList.remove('activo');
+        }
+        this.classList.add('activo');
+        event.stopPropagation();
+        valorSeleccionadoSemana = this.getAttribute('id').split('-')[2];
+    });
+}
+
+document.addEventListener('click', function() {
+    for (var i = 0; i < elementosFormularioSemana.length; i++) {
+        elementosFormularioSemana[i].classList.remove('activo');
+    }
+    for (var i = 0; i < elementosFormularioSemana.length; i++) {
+        if (elementosFormularioSemana[i].classList.contains('activo')) {
+            valorSeleccionadoSemana = elementosFormularioSemana[i].getAttribute('id').split('-')[2];
+            break;
+        }
+    }
+});
+
+document.getElementById('boton_3').addEventListener('click', function() {
+    if (valorSeleccionadoSemana){
+        switch (valorSeleccionadoSemana) {
+            case '1':
+                valorSeleccionadoSemana = 'Lunes';
+                break;
+            case '2':
+                valorSeleccionadoSemana = 'Martes';
+                break;
+            case '3':
+                valorSeleccionadoSemana = 'Miercoles';
+                break;
+            case '4':
+                valorSeleccionadoSemana = 'Jueves';
+                break;
+            case '5':
+                valorSeleccionadoSemana = 'Viernes';
+                break;
+            case '6':
+                valorSeleccionadoSemana = 'Sabado';
+                break;
+        }
+        alert("Hola " + nombre + " " + apellido + ", tu primera visita a nuestro gimnasio es el " + valorSeleccionadoSemana + ", te esperamos! Plan Seleccionado: " + valorSeleccionado)
+    }else{
+        alert('No se ha seleccionado ningún dia.');
+    }
+});
 
 
-
-///alert("Hola " + nombre + " " + apellido + ", tu servicio del plan " + valorSeleccionado);

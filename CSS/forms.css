@@ -205,15 +205,25 @@
         background-color: #38dbff76;
     }
 
+    #formulario-3{
+        flex-direction: row;
+    }
 
+    .formulario-semana{
+        flex: 1;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: 30px 0px;
+        margin: 50px 20px 60px;
+        border-radius: 10px;
+        background-color: #58585800;
+        border: 2px solid #38dbff;
+    }
 
-
-
-
-
-
-
-
+    .formulario-semana:hover{
+        background-color: #58585878;
+    }
 
     .ubicacion{
         background-color: #101010;
