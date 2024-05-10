@@ -50,22 +50,33 @@
         </div>
     </div>
     <div class="contenedor-formulario" id="seccion4">
-        <h1 class="contenedor-formulario-titulo">Empezar Registrandome</h1>
-        <div class="formulario">
-            <section class="form-registros">
-                <div class="seccion-registros" id="seccion-registros-izquierda">
-                    <input class="registros" id="registro-nombre" type="text" name="nombres" placeholder="Nombre">
-                    <input class="registros" id="registro-apellido" type="text" name="apellios" placeholder="Apellido">
-                </div>
-                <div class="seccion-registros" id="seccion-registros-derecha">
-                    <input class="registros" id="registro-email" type="email" name="emails" placeholder="Email">
-                    <input class="registros" id="registro-telefono" type="tel" name="telefonos" placeholder="Celular">
-                </div>
-            </section>
-            <section class="botones">
-                <div id="boton_1" value="Sigiuente">
+        <div class="pestaña" id="primera-pestaña">
+            <h1 class="contenedor-formulario-titulo">Completar el Formulario</h1>
+            <div class="formulario">
+                <section class="form-registros">
+                    <div class="seccion-registros" id="seccion-registros-izquierda">
+                        <input class="registros" id="nombre" type="text" name="nombres" placeholder="Nombre">
+                        <input class="registros" id="apellido" type="text" name="apellios" placeholder="Apellido">
+                    </div>
+                    <div class="seccion-registros" id="seccion-registros-derecha">
+                        <input class="registros" id="email" type="email" name="emails" placeholder="Email">
+                        <input class="registros" id="telefono" type="tel" name="telefonos" placeholder="Celular">
+                    </div>
+                </section>
+                <section class="botones" id="boton_1">
+                        <p>Enviar</p>
+                </section>
+            </div>
+        </div>
+        <div class="pestaña" id="segunda-pestaña">
+            <h1 class="contenedor-formulario-titulo">Planes</h1>
+            <div class="formulario" id="formulario-2">
+                <div class="formulario-planes" id="formulario-planes-1" >BASICO</div>
+                <div class="formulario-planes" id="formulario-planes-2">PRO</div>
+                <div class="formulario-planes" id="formulario-planes-3">VIP</div>
+            </div>
+            <section class="botones" id="boton_2">
                     <p>Enviar</p>
-                </div>
             </section>
         </div>
     </div>

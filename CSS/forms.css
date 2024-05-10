@@ -97,6 +97,14 @@
         align-items: center;
     }
 
+    .pestaña{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .form-registros{
         display: flex;
         flex-direction: row;
@@ -105,22 +113,18 @@
         margin: 0px 0px 30px 0px;
     }
 
-    .botones{
+    .botones p{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin: 0px 0px 50px 0px;
-    }
-
-    #boton_1 p{
         padding: 12px  80px ;
         background-color: #38dbff;
         border-radius: 10px;
         color: #fff;
-        }
-
-    #boton_1 p:hover{
+    }
+    .botones p:hover{
         background-color: #ffffff4a;
         color: #ffffff81;
     }
@@ -149,6 +153,67 @@
     .registros:hover{
         background-color: #ffffff0d;
     }
+
+    #primera-pestaña{
+        display: none;
+    }
+
+    #segunda-pestaña h1{
+        margin: 0px 0px 40px 0px;
+    }
+
+    #boton_2 p{
+        margin: 40px 0px 0px 0px;
+    }
+
+    #formulario-2{
+        flex-direction: row;
+    }
+
+    .formulario-planes{
+        flex: 1;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: 75px 0px;
+        margin: 0px 40px;
+        border-radius: 10px;
+        background-color: #58585800;
+        border: 2px solid #38dbff; 
+    }
+
+    .formulario-planes:hover{
+        background-color: #58585878;
+    }
+
+    .activo{
+        transform: translateY(-10px);
+        box-shadow: 0px 60px 20px rgba(0, 0, 0, 0.2);
+        background-color: #58585878;
+    }
+
+    #formulario-planes-2{
+        background-color: #38dbff00;
+        padding: 95px 0px;
+    }
+
+    #formulario-planes-2:hover{
+        background-color: #38dbff76;
+    }
+
+    #formulario-planes-2.activo {
+        background-color: #38dbff76;
+    }
+
+
+
+
+
+
+
+
+
+
 
     .ubicacion{
         background-color: #101010;
@@ -251,6 +316,33 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 450px) {
 
@@ -398,7 +490,7 @@
         margin: 0px 15px;
     }
 
-    .registros {
+    .registros{
         flex: 1;
         border: none;
         margin: 2% 0;
@@ -411,167 +503,106 @@
         max-width: 400px;
     }
     
-    
     .registros:hover{
         background-color: #ffffff0d;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        .ubicacion{
-            background-color: #101010;
-            display: flex;
-            flex-direction: column;
-        }
-    
-        .ubicacion .texto{
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    
-        .ubicacion .texto h1{
-            margin: 0px;
-            padding-bottom: 20px;
-    
-        }
-    
-        .ubicacion .texto h2{
-            color: #adeffe;
-            margin: 0px;
-            padding-bottom: 10px;
-        }
-    
-        .ubicacion .texto p{
-            margin: 0px;
-            padding-bottom: 10px;
-        }
-    
-        .a1{
-            text-decoration: none;
-            color: #ffffff84;
-        }
-    
-        .a1:hover{
-            color: #ffffff;
-        }
-    
-        .contacto {
-            list-style-type: none;
-            padding-left: 0;
-        }
-    
-        .contacto li {
-            margin-bottom: 0px;
-            padding-bottom: 10px;
-        }
-        
-        .contacto li img {
-            width: 15px;
-            margin: 0px;
-            padding-right: 10px;
-        }
-    
-        #sociales2{
-            margin-top: 40px;
-        }
-
-        .ubicacion .pre-mapa{
-            flex: 1;
-        }    
-    
-        #map{
-            height: 300px;
-            width: 100%;
-        }
-    
-        .footer {
-            background-color: #000000;
-            color: #fff;
-            padding: 20px 0px;
-            text-align: center;
-            z-index: 999;
-            margin-top: auto;
-        }
-        
-        
-        .boton-chat a{
-            background-color: #38dbff7f;
-            padding: 8px;
-            position: fixed;
-            bottom: 4%;
-            right: 5%;
-            z-index: 1000;
-            border-radius: 20%;
-        }
-        
-        .boton-chat-icon{
-            width: 45px;
-            opacity: 0.4;
-        }
-        .boton-chat a:hover{
-            background-color: #38dbff;
-        }
-    
-    
-    
-    
+    .ubicacion{
+        background-color: #101010;
+        display: flex;
+        flex-direction: column;
     }
 
+    .ubicacion .texto{
+        flex: 1;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    .ubicacion .texto h1{
+        margin: 0px;
+        padding-bottom: 20px;
 
+    }
 
+    .ubicacion .texto h2{
+        color: #adeffe;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
 
+    .ubicacion .texto p{
+        margin: 0px;
+        padding-bottom: 10px;
+    }
 
+    .a1{
+        text-decoration: none;
+        color: #ffffff84;
+    }
 
+    .a1:hover{
+        color: #ffffff;
+    }
 
+    .contacto {
+        list-style-type: none;
+        padding-left: 0;
+    }
 
+    .contacto li {
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+    }
+    
+    .contacto li img {
+        width: 15px;
+        margin: 0px;
+        padding-right: 10px;
+    }
 
+    #sociales2{
+        margin-top: 40px;
+    }
 
+    .ubicacion .pre-mapa{
+        flex: 1;
+    }    
 
+    #map{
+        height: 300px;
+        width: 100%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .footer {
+        background-color: #000000;
+        color: #fff;
+        padding: 20px 0px;
+        text-align: center;
+        z-index: 999;
+        margin-top: auto;
+    }
+    
+    
+    .boton-chat a{
+        background-color: #38dbff7f;
+        padding: 8px;
+        position: fixed;
+        bottom: 4%;
+        right: 5%;
+        z-index: 1000;
+        border-radius: 20%;
+    }
+    
+    .boton-chat-icon{
+        width: 45px;
+        opacity: 0.4;
+    }
+    .boton-chat a:hover{
+        background-color: #38dbff;
+    }
 
 
 

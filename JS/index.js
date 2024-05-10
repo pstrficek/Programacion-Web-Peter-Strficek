@@ -61,4 +61,65 @@ links.forEach(link => {
 });
 
 /*********************************************/
+/*********************************************/
+/*********************************************/
+
+function validarFormulario(){
+    var nombre = document.getElementById('nombre').value
+    var apellido = document.getElementById('apellido').value
+    var email = document.getElementById('email').value
+    var telefono = document.getElementById('telefono').value
+    if (nombre == "" || email == "" || edad == "" || apellido == "") {
+        alert("Por favor, complete todos los campos.");
+        return false;
+    }
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; /// Use chat para sacar la Expresion Regular
+    if (!emailRegex.test(email)) {
+        alert("Por favor, introduzca una dirección de correo electrónico válida.");
+        return false;
+    }
+
+    if (isNaN(telefono) || telefono.length < 7 || telefono.length > 15) {
+        alert("Por favor, introduzca un número de teléfono válido.");
+        return false;
+    }
+    return {
+        valido: true,
+        nombre: nombre,
+        apellido: apellido,
+        telefono: telefono,
+        email: email
+    };
+}
+/*********************************************/
+document.getElementById('boton_1').addEventListener('click', function() {
+    var resultadoValidacion = validarFormulario();
+    if (resultadoValidacion.valido) {
+        var nombre = resultadoValidacion.nombre;
+        var apellido = resultadoValidacion.apellido;
+        var telefono = resultadoValidacion.telefono;
+        var email = resultadoValidacion.email;
+
+    } 
+});
+/*********************************************/
+var elementosFormulario = document.getElementsByClassName('formulario-planes');
+for (var i = 0; i < elementosFormulario.length; i++) {
+    elementosFormulario[i].addEventListener('click', function(event) {
+        for (var j = 0; j < elementosFormulario.length; j++) {
+            elementosFormulario[j].classList.remove('activo');
+        }
+        this.classList.add('activo');
+        event.stopPropagation();
+    });
+}
+document.addEventListener('click', function() {
+    for (var i = 0; i < elementosFormulario.length; i++) {
+        elementosFormulario[i].classList.remove('activo');
+    }
+});
+
+/*********************************************/
+
 
