@@ -83,18 +83,20 @@ function validarFormulario(){
     };
 }
 /*********************************************/
+var nombre, apellido, email, telefono; // Variables globales para almacenar nombre y apellido
+
 document.getElementById('boton_1').addEventListener('click', function() {
     var resultadoValidacion = validarFormulario();
     if (resultadoValidacion.valido == true) {
-        var nombre = resultadoValidacion.nombre;
-        var apellido = resultadoValidacion.apellido;
-        var telefono = resultadoValidacion.telefono;
-        var email = resultadoValidacion.email;
+        nombre = resultadoValidacion.nombre;
+        apellido = resultadoValidacion.apellido;
+        email = resultadoValidacion.email;
+        telefono = resultadoValidacion.telefono;
         document.getElementById('primera-pestaña').classList.add('oculto');
         document.getElementById('segunda-pestaña').classList.remove('oculto');
     } 
 });
-/*********************************************/
+
 var valorSeleccionado = ''; 
 var elementosFormulario = document.getElementsByClassName('formulario-planes');
 for (var i = 0; i < elementosFormulario.length; i++) {
@@ -107,22 +109,21 @@ for (var i = 0; i < elementosFormulario.length; i++) {
         valorSeleccionado = this.getAttribute('id').split('-')[2];
     });
 }
+
 document.addEventListener('click', function() {
     for (var i = 0; i < elementosFormulario.length; i++) {
         elementosFormulario[i].classList.remove('activo');
     }
-for (var i = 0; i < elementosFormulario.length; i++) {
-    if (elementosFormulario[i].classList.contains('activo')) {
-        valorSeleccionado = elementosFormulario[i].getAttribute('id').split('-')[2];
-        break;
+    for (var i = 0; i < elementosFormulario.length; i++) {
+        if (elementosFormulario[i].classList.contains('activo')) {
+            valorSeleccionado = elementosFormulario[i].getAttribute('id').split('-')[2];
+            break;
+        }
     }
-}
-
 });
-/*********************************************/
+
 document.getElementById('boton_2').addEventListener('click', function() {
     if (valorSeleccionado){
-        var valorSeleccionadoConvertido = '';
         switch (valorSeleccionado) {
             case '1':
                 valorSeleccionado = 'basico';
@@ -134,13 +135,15 @@ document.getElementById('boton_2').addEventListener('click', function() {
                 valorSeleccionado = 'vip';
                 break;
         }
-        alert(valorSeleccionado);
+        document.getElementById('segunda-pestaña').classList.add('oculto')
+        document.getElementById('tercera-pestaña').classList.add('oculto')
 
     } else{
         alert('No se ha seleccionado ningún plan.');
     }
 });
-/*********************************************/
-function crearAlerta(nombre, apellido, valorSeleccionado) {
-    alert("Hola " + nombre + " " + apellido + ", tu servicio del plan " + valorSeleccionado);
-}
+
+
+
+
+///alert("Hola " + nombre + " " + apellido + ", tu servicio del plan " + valorSeleccionado);
