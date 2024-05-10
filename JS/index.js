@@ -104,6 +104,7 @@ document.getElementById('boton_1').addEventListener('click', function() {
     } 
 });
 /*********************************************/
+var valorSeleccionado = ''; 
 var elementosFormulario = document.getElementsByClassName('formulario-planes');
 for (var i = 0; i < elementosFormulario.length; i++) {
     elementosFormulario[i].addEventListener('click', function(event) {
@@ -112,14 +113,41 @@ for (var i = 0; i < elementosFormulario.length; i++) {
         }
         this.classList.add('activo');
         event.stopPropagation();
+        valorSeleccionado = this.getAttribute('id').split('-')[2];
     });
 }
 document.addEventListener('click', function() {
     for (var i = 0; i < elementosFormulario.length; i++) {
         elementosFormulario[i].classList.remove('activo');
     }
+for (var i = 0; i < elementosFormulario.length; i++) {
+    if (elementosFormulario[i].classList.contains('activo')) {
+        valorSeleccionado = elementosFormulario[i].getAttribute('id').split('-')[2];
+        break;
+    }
+}
+
 });
-
 /*********************************************/
-
-
+document.getElementById('boton_2').addEventListener('click', function() {
+    if (valorSeleccionado){
+        var valorSeleccionadoConvertido = '';
+        switch (valorSeleccionado) {
+            case '1':
+                valorSeleccionado = 'basico';
+                break;
+            case '2':
+                valorSeleccionado = 'pro';
+                break;
+            case '3':
+                valorSeleccionado = 'vip';
+                break;
+        }
+    } else{
+        alert('No se ha seleccionado ningún plan.');
+    }
+});
+/*********************************************/
+function crearAlerta(nombre, apellido, valorSeleccionado) {
+    alert("Hola " + nombre + " " + apellido + ", tu servicio del plan " + valorSeleccionado);
+}
