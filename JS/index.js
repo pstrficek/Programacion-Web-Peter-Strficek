@@ -69,21 +69,11 @@ function validarFormulario(){
     var apellido = document.getElementById('apellido').value
     var email = document.getElementById('email').value
     var telefono = document.getElementById('telefono').value
-    if (nombre == "" || email == "" || edad == "" || apellido == "") {
+    if (nombre == "" || email == "" || telefono == "" || apellido == "") {
         alert("Por favor, complete todos los campos.");
         return false;
     }
 
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; /// Use chat para sacar la Expresion Regular
-    if (!emailRegex.test(email)) {
-        alert("Por favor, introduzca una dirección de correo electrónico válida.");
-        return false;
-    }
-
-    if (isNaN(telefono) || telefono.length < 7 || telefono.length > 15) {
-        alert("Por favor, introduzca un número de teléfono válido.");
-        return false;
-    }
     return {
         valido: true,
         nombre: nombre,
@@ -95,12 +85,13 @@ function validarFormulario(){
 /*********************************************/
 document.getElementById('boton_1').addEventListener('click', function() {
     var resultadoValidacion = validarFormulario();
-    if (resultadoValidacion.valido) {
+    if (resultadoValidacion.valido == true) {
         var nombre = resultadoValidacion.nombre;
         var apellido = resultadoValidacion.apellido;
         var telefono = resultadoValidacion.telefono;
         var email = resultadoValidacion.email;
-
+        document.getElementById('primera-pestaña').classList.add('oculto');
+        document.getElementById('segunda-pestaña').classList.remove('oculto');
     } 
 });
 /*********************************************/
@@ -143,6 +134,8 @@ document.getElementById('boton_2').addEventListener('click', function() {
                 valorSeleccionado = 'vip';
                 break;
         }
+        alert(valorSeleccionado);
+
     } else{
         alert('No se ha seleccionado ningún plan.');
     }
