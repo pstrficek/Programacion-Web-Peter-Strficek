@@ -363,6 +363,7 @@
     }
     
     body {
+        width: 100%;
         margin: 0;
         padding: 0;
         font-size: 18px;
@@ -373,13 +374,14 @@
         flex-direction: column;
         }
     
-    .header {
+    .headerr {
+        flex: 0;
         position: fixed;
         width: 100%;
         z-index: 1000;
         box-sizing: border-box;
         display: flex;
-        background-color: #00000000;
+        background-color: #000000;
     }
 
     .menu, .sociales, .logo {
@@ -404,13 +406,15 @@
         width: 100%;
         height: 100%;
         top: 75px;
-        position: fixed;   
-        left: 100%;
+        position: fixed;
+        display: none;
         padding-top: 30px;
     }
     .menu-responsive_visible{
+        display: flex;
         left: 0;
         transition: left 0,3s;
+        background-color: #000000;
     }
 
     .responsive-menu ul{
@@ -436,23 +440,24 @@
     }
     
     .contenedor-formulario{
-        width: 50%;
-        margin: 10% 0px;
+        margin-top: 75px;
+        flex: 1;
+        width: 100%;
         background-color: #ffffff0f;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 30px;
-        border: 2px solid #38dbff; 
-        padding: 50px 40px;
+        border-top: 3px solid #38dbff;
+        border-bottom: 3px solid #38dbff;
+        padding: 20px 0px;
         position: relative;
-        left: 16%;
     }
 
     .contenedor-formulario-titulo{
         margin: 0;
         margin: 50px 0px;
+        text-align: center;
     }
 
     .formulario{
@@ -471,22 +476,18 @@
         margin: 0px 0px 30px 0px;
     }
 
-    .botones{
+    .botones p{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin: 0px 0px 50px 0px;
-    }
-
-    #boton_1 p{
         padding: 12px  80px ;
         background-color: #38dbff;
         border-radius: 10px;
         color: #fff;
-        }
-
-    #boton_1 p:hover{
+    }
+    .botones p:hover{
         background-color: #ffffff4a;
         color: #ffffff81;
     }
@@ -504,23 +505,95 @@
         flex: 1;
         border: none;
         margin: 2% 0;
-        padding: 1.5% 5% 1.5% 1.5%;
+        padding: 8% 20% 8% 1.5%;
         border-radius: 10px;
         background-color: #ffffff31;
         color: #fff;
         font-weight: 700;
         width: 90%;
-        max-width: 400px;
     }
     
     .registros:hover{
         background-color: #ffffff0d;
     }
 
+    .oculto{
+        display: none;
+    }
+
+    #segunda-pestaña h1{
+        margin: 0px 0px 40px 0px;
+    }
+
+    #formulario-2{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .formulario-planes{
+        flex: 1;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: 50px 0px;
+        margin: 15px 0px;
+        width: 80%;
+        border-radius: 10px;
+        background-color: #58585800;
+        border: 2px solid #38dbff; 
+    }
+
+    .formulario-planes:hover{
+        background-color: #58585878;
+    }
+
+    .activo{
+        transform: translateY(0px);
+        box-shadow: 0px 60px 20px rgba(0, 0, 0, 0.2);
+        background-color: #58585878;
+    }
+
+    #formulario-planes-2{
+        background-color: #38dbff00;
+    }
+
+    #formulario-planes-2:hover{
+        background-color: #38dbff76;
+    }
+
+    #formulario-planes-2.activo {
+        background-color: #38dbff76;
+    }
+
+    #formulario-3{
+        flex-direction: column;
+    }
+
+    .formulario-semana{
+        flex: 1;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 80%;
+        padding: 30px 0px;
+        margin: 0px 0px 60px;
+        border-radius: 10px;
+        background-color: #58585800;
+        border: 2px solid #38dbff;
+    }
+
+    .formulario-semana:hover{
+        background-color: #58585878;
+    }
+
+
+
+
     .ubicacion{
         background-color: #101010;
         display: flex;
         flex-direction: column;
+        flex: 1
     }
 
     .ubicacion .texto{

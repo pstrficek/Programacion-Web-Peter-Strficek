@@ -69,7 +69,7 @@ function validarFormulario(){
     var apellido = document.getElementById('apellido').value
     var email = document.getElementById('email').value
     var telefono = document.getElementById('telefono').value
-    if (nombre == "" || email == "" || telefono == "" || apellido == "") {
+    if (nombre == "" || email == "" || apellido == "") {
         alert("Por favor, complete todos los campos.");
         return false;
     }
