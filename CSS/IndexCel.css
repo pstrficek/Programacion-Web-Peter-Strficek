@@ -85,17 +85,10 @@
     .imagen-fondo{
         position: relative;
         width: 100%;
-        height: auto;
-        overflow: hidden;
     }
 
     .imagen-fondo-pc{
         display: none;
-    }
-
-    .imagen-fondo-cel{
-        height: auto;
-        width: 100%;
     }
 
     .imagen-fondo .texto {
