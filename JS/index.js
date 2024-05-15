@@ -83,7 +83,7 @@ function validarFormulario(){
     };
 }
 /*********************************************/
-var nombre, apellido, email, telefono; // Variables globales para almacenar nombre y apellido
+var nombre, apellido, email, telefono;
 
 document.getElementById('boton_1').addEventListener('click', function() {
     var resultadoValidacion = validarFormulario();
@@ -143,57 +143,77 @@ document.getElementById('boton_2').addEventListener('click', function() {
     }
 });
 
-var valorSeleccionadoSemana = ''; 
 var elementosFormularioSemana = document.getElementsByClassName('formulario-semana');
+var valorSeleccionadoSemana = 0;
 for (var i = 0; i < elementosFormularioSemana.length; i++) {
     elementosFormularioSemana[i].addEventListener('click', function(event) {
-        for (var j = 0; j < elementosFormularioSemana.length; j++) {
-            elementosFormularioSemana[j].classList.remove('activo');
-        }
-        this.classList.add('activo');
-        event.stopPropagation();
-        valorSeleccionadoSemana = this.getAttribute('id').split('-')[2];
+        this.classList.toggle('activo');
     });
 }
 
-document.addEventListener('click', function() {
-    for (var i = 0; i < elementosFormularioSemana.length; i++) {
-        elementosFormularioSemana[i].classList.remove('activo');
-    }
-    for (var i = 0; i < elementosFormularioSemana.length; i++) {
-        if (elementosFormularioSemana[i].classList.contains('activo')) {
-            valorSeleccionadoSemana = elementosFormularioSemana[i].getAttribute('id').split('-')[2];
-            break;
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.formulario-semana')) {
+        for (var i = 0; i < elementosFormularioSemana.length; i++) {
+            elementosFormularioSemana[i].classList.remove('activo');
         }
     }
-});
+
+
+    valorSeleccionadoSemana = 0
+    for (var i = 0; i < elementosFormularioSemana.length; i++) {
+        if (elementosFormularioSemana[i].classList.contains('activo')) {
+            valorSeleccionadoSemana += 1;
+        }
+    }
+}
+);
+
+
+
 
 document.getElementById('boton_3').addEventListener('click', function() {
     if (valorSeleccionadoSemana){
-        switch (valorSeleccionadoSemana) {
-            case '1':
-                valorSeleccionadoSemana = 'Lunes';
-                break;
-            case '2':
-                valorSeleccionadoSemana = 'Martes';
-                break;
-            case '3':
-                valorSeleccionadoSemana = 'Miercoles';
-                break;
-            case '4':
-                valorSeleccionadoSemana = 'Jueves';
-                break;
-            case '5':
-                valorSeleccionadoSemana = 'Viernes';
-                break;
-            case '6':
-                valorSeleccionadoSemana = 'Sabado';
-                break;
-        }
-        alert("Hola " + nombre + " " + apellido + ", tu primera visita a nuestro gimnasio es el " + valorSeleccionadoSemana + ", te esperamos! Plan Seleccionado: " + valorSeleccionado)
+        precio = calcularPrecio(valorSeleccionado, valorSeleccionadoSemana)
+        seleccion = true
+        document.getElementById('tercera-pestaña').classList.add('oculto')
+        document.getElementById('cuarta-pestaña').classList.remove('oculto')
+        var mensaje = document.getElementById("formulario-completo");
+        mensaje.innerHTML = "¡Ahora solo falta que nos vengas a visitar para tu día de prueba!<br>" +
+    "Tu plan consiste de:<br>" +
+    "Una membresía: " + valorSeleccionado + "<br>" +
+    "Días a la semana: " + valorSeleccionadoSemana + "<br>" +
+    "Un costo final de: $" + precio + "/mes";
+
     }else{
         alert('No se ha seleccionado ningún dia.');
     }
 });
 
+function calcularPrecio(plan, dias){
+    var precioBase = 0;
+    switch (plan) {
+        case 'basico':
+            precioBase = 10000;
+            break;
+        case 'pro':
+            precioBase = 15000;
+            break;
+        case 'vip':
+            precioBase = 20000;
+            break;
+
+    }
+
+    if (dias <= 2) {
+        porcentajeAdicional = 0;
+    } else if (dias <= 4) {
+        porcentajeAdicional = 0.1;
+    } else if (dias <= 6) {
+        porcentajeAdicional = 0.2;
+    }
+
+var precioTotal = precioBase + (precioBase * porcentajeAdicional);
+
+return precioTotal;
+}
 
